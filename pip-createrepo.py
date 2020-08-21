@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os, shutil
 
-pipdir = '/repo/local/pip'
+pipdir = '.'
 
 
 def move2dir(fname):
