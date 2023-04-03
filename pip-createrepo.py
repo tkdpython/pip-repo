@@ -9,7 +9,7 @@ def move2dir(fname):
     libname = filename[0]
     dirname = libname.replace("_","-").lower()
 
-    print(f"{fname} will be moved to {dirname}")
+    print(f"Moving {fname} to {dirname}")
     dirpath = pipdir + "/" + dirname
     if not os.path.exists(dirpath):
         os.mkdir(dirpath)
@@ -20,5 +20,5 @@ def move2dir(fname):
 
 
 for fname in os.listdir(pipdir):
-    if fname.endswith(".whl") or fname.endswith(".tar.gz") or fname.endswith(".tgz"):
+    if fname.endswith(".whl") or fname.endswith(".tar.gz") or fname.endswith(".tgz") or fname.endswith(".zip"):
         move2dir(fname)
